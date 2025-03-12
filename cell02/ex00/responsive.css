@@ -1,0 +1,10 @@
+.body html{
+    width: 100vw;
+    height: 100vh;
+}
+.table{
+    border: 3px solid black;
+    width: 50px;
+    height: 100px;
+    line-height: 250px;
+}
