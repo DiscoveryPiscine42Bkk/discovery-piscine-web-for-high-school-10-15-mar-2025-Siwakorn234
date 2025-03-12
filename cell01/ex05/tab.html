@@ -1,16 +1,20 @@
-<head>
-    <title>Tab</title>
-</head>
+<style>
+    .flex-container{
+        border: 3px solid black;
+        width: 500px;
+        height: 250px;
+        display: inline-block;
+        margin: -5px;
+        line-height: 250px;
+    }
+    .box1{
+        background-color: aqua;
+    }
+    .box2{
+        background-color: brown;
+    }
+</style>
 <body>
-<table border="2" cellspacing="0" cellipadding="100">
-    <tr>
-        <td style="background-color: blue;" height="200" width="400">
-            True
-        </td>
-        <td style="background-color: brown;" height="200" width="400">
-            False
-        </td>
-    </tr>
-</table>
-
+<div class="flex-container box1">First cell</div>
+<div class="flex-container box2">Second cell</div>
 </body>
