@@ -2,11 +2,12 @@
     width: 100vw;
     height: 100vh;
 }
+
 .container{
     border: 1px solid black;
     width: 100%;
     height: 100%;
-    border-radius: 0%;
+    border-radius: 46px;
     text-align: center;
     line-height: 0;
     background-image: url(https://media.istockphoto.com/id/1176474358/vector/orange-abstract-gradient-background.jpg?s=612x612&w=0&k=20&c=br04DlKn9f8VO2NkwaU_4h6TOdX5_8-_KaT51S_gDro=); 
@@ -52,10 +53,13 @@ p{
 }
 
 h1{
-    font-size: 44px;
+    font-size: 40px;
     font-family: Arial;
+    text-align: center;
+    color:  white;
 }
 
-text{
-    margin-top: 10000px;
+h2{
+    font-size: 35px;
+    font-family: Arial;
 }
