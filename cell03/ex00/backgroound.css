@@ -1,10 +1,10 @@
 body {
     text-align: center;
-    margin-top: 20%;
+    margin-top: 25%;
 }
 
 .mybutton {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 0px;
+    font-size: 30px;
     cursor: pointer;
 }
