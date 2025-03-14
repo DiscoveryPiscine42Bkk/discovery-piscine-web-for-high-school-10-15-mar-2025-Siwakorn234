@@ -1,0 +1,120 @@
+html{
+    margin: 0;
+}
+
+.body html{
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    border: 1px solid black;
+    width: 500px;
+    height: 100%;
+    border-radius: 46px;
+    text-align: center;
+    line-height: 0;
+    background-image: url(https://media.istockphoto.com/id/1176474358/vector/orange-abstract-gradient-background.jpg?s=612x612&w=0&k=20&c=br04DlKn9f8VO2NkwaU_4h6TOdX5_8-_KaT51S_gDro=); 
+    margin: auto;
+}
+
+.profile-img{
+    align-items: center;
+    width: 195px;
+    height: 248px;
+    border: 3px solid green;
+    border-radius: 3%;
+}
+
+.image-container{
+    display: felx;
+    line-height: 0;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.cre-img{
+    align-items: center;
+    width: 230px;
+    height: auto;
+    border: 3px solid green;
+    border-radius: 3%;
+    display: inline-block;
+}
+
+p{
+    font-size: 23px;
+    font-family: Arial;
+    color: black;
+}
+
+h1{
+    font-size: 40px;
+    font-family: Arial;
+    text-align: center;
+    color:  white;
+    float: left;
+}
+
+h2{
+    font-size: 35px;
+    font-family: Arial;
+}
+
+
+
+button{
+    background-color: orange; 
+    margin-left: 10px; 
+    border-radius: 10px; 
+    padding: 10px; 
+    width: 90px;
+}
+
+button a{
+    color: white; 
+    font-weight: bold; 
+    font-size: 15px;
+}
+
+section {
+    padding: 50px 20px;
+    height: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-image:url(https://media.istockphoto.com/id/1176474358/vector/orange-abstract-gradient-background.jpg?s=612x612&w=0&k=20&c=br04DlKn9f8VO2NkwaU_4h6TOdX5_8-_KaT51S_gDro=) ;
+    color: orange;
+    padding: 2px 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 20px;
+    font-family: Arial;
+
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 3;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
