@@ -8,7 +8,7 @@ html{
 }
 
 .container{
-    border: 1px solid black;
+    border: 3px solid black;
     width: 500px;
     height: 100%;
     border-radius: 46px;
@@ -28,7 +28,7 @@ html{
 
 .image-container{
     display: felx;
-    line-height: 0;
+    line-height: 3;
     gap: 50px;
     justify-content: center;
     align-items: center;
@@ -49,6 +49,7 @@ p{
     font-size: 23px;
     font-family: Arial;
     color: black;
+    text-decoration: ;
 }
 
 h1{
@@ -57,6 +58,7 @@ h1{
     text-align: center;
     color:  white;
     float: left;
+    margin-left: 30px;
 }
 
 h2{
@@ -91,21 +93,20 @@ header {
     width: 100%;
     background-image:url(https://media.istockphoto.com/id/1176474358/vector/orange-abstract-gradient-background.jpg?s=612x612&w=0&k=20&c=br04DlKn9f8VO2NkwaU_4h6TOdX5_8-_KaT51S_gDro=) ;
     color: orange;
-    padding: 2px 0;
-    z-index: 1000;
+    right: 0;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    text-align: center;
+    text-align: right;
+    margin-right: 10px;
 }
 
 nav ul li {
     display: inline;
     margin: 20px;
     font-family: Arial;
-
 }
 
 nav ul li a {
@@ -115,6 +116,3 @@ nav ul li a {
     line-height: 3;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
-}
