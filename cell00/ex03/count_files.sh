@@ -1,1 +1,1 @@
-42
+find . -type d | wc -l

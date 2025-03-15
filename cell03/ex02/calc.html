@@ -44,13 +44,13 @@
             const operator = document.getElementById('operatorSelect').value;
 
             // Check for empty input or invalid input (non-positive integer)
-            if (leftValue === '' || rightValue === '' || !Number.isInteger(+leftValue) || !Number.isInteger(+rightValue) || +leftValue < 0 || +rightValue < 0) {
+            if (leftValue === '' || rightValue === '' || !Number.isInteger(leftValue) || !Number.isInteger(rightValue) || leftValue < 0 || rightValue < 0) {
                 alert('Error :(');
                 return;
             }
 
-            const leftNum = +leftValue;
-            const rightNum = +rightValue;
+            const leftNum = leftValue;
+            const rightNum = rightValue;
 
             let result;
 

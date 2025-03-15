@@ -6,7 +6,6 @@ function loadTasks() {
     }
 }
 
-// Function to add a new task
 function addTask(text, save = true) {
     if (!text.trim()) return;
 
@@ -27,7 +26,6 @@ function addTask(text, save = true) {
     if (save) saveTasks();
 }
 
-// Function to save tasks in cookies
 function saveTasks() {
     let tasks = [];
     document.querySelectorAll(".task").forEach(task => {
@@ -36,7 +34,6 @@ function saveTasks() {
     setCookie("tasks", JSON.stringify(tasks), 7);
 }
 
-// Function to set a cookie
 function setCookie(name, value, days) {
     let expires = "";
     if (days) {
@@ -47,7 +44,6 @@ function setCookie(name, value, days) {
     document.cookie = name + "=" + value + expires + "; path=/";
 }
 
-// Function to get a cookie
 function getCookie(name) {
     let nameEQ = name + "=";
     let cookies = document.cookie.split(";");
@@ -58,11 +54,9 @@ function getCookie(name) {
     return null;
 }
 
-// Add event listener to the New button
 document.getElementById("newTask").addEventListener("click", function () {
     let newTask = prompt("Enter a new TO DO:");
     if (newTask) addTask(newTask);
 });
 
-// Load existing tasks when the page loads
 window.onload = loadTasks;
