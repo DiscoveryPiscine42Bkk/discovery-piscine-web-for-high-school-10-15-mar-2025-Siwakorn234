@@ -3,106 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> basic calculator</title>
+    <title>Basic Calculator</title>
     <style>
-        
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
             font-family: Arial, sans-serif;
+            margin: 20px;
         }
-        .calculator {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        input, select, button {
-            margin: 10px;
-            padding: 10px;
+        input, select {
+            margin: 10px 0;
+            padding: 5px;
             font-size: 16px;
         }
         button {
-            background: #007BFF;
-            color: white;
-            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
             cursor: pointer;
-            border-radius: 5px;
-        }
-        button:hover {
-            background: #0056b3;
         }
     </style>
 </head>
 <body>
 
-    <div class="calculator">
-        <h1> basic calculator</h1>
+    <h2>Basic Calculator</h2>
 
-       
-        <input type="text" id="num1" placeholder="Enter first number">
-
-        
-        <select id="operator">
-            <option value="+">+</option>
-            <option value="-">-</option>
-            <option value="*">*</option>
-            <option value="/">/</option>
-            <option value="%">%</option>
-        </select>
-
-        
-        <input type="text" id="num2" placeholder="Enter second number">
-
-        
-        <button onclick="calculate()">Try me!</button>
-    </div>
+    <input type="number" id="leftInput" placeholder="Enter first number" min="0">
+    <select id="operatorSelect">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="number" id="rightInput" placeholder="Enter second number" min="0">
+    <button id="tryMeButton">Try me!</button>
 
     <script>
-        function calculate() {
-            const num1 = document.getElementById("num1").value.trim();
-            const num2 = document.getElementById("num2").value.trim();
-            const operator = document.getElementById("operator").value;
+        document.getElementById('tryMeButton').addEventListener('click', function() {
+            // Get inputs and operator
+            const leftValue = document.getElementById('leftInput').value;
+            const rightValue = document.getElementById('rightInput').value;
+            const operator = document.getElementById('operatorSelect').value;
 
-            
-            if (!/^\d+(\.\d+)?$/.test(num1) || !/^\d+(\.\d+)?$/.test(num2)) {
-                console.error("error: invalid input ->", num1, operator, num2);
+            // Check for empty input or invalid input (non-positive integer)
+            if (leftValue === '' || rightValue === '' || !Number.isInteger(+leftValue) || !Number.isInteger(+rightValue) || +leftValue < 0 || +rightValue < 0) {
+                alert('Error :(');
                 return;
             }
 
-            //
-            const val1 = parseFloat(num1);
-            const val2 = parseFloat(num2);
+            const leftNum = +leftValue;
+            const rightNum = +rightValue;
 
-            
-            if ((operator === '/' || operator === '%') && val2 === 0) {
-                alert("it's over 9000!");
-                console.error("Math error: dividing/mod by zero ->", val1, operator, val2);
-                return;
-            }
-
-            
             let result;
+
+            // Handle the calculation based on operator
             switch (operator) {
-                case '+': result = val1 + val2; break;
-                case '-': result = val1 - val2; break;
-                case '*': result = val1 * val2; break;
-                case '/': result = val1 / val2; break;
-                case '%': result = val1 % val2; break;
+                case '+':
+                    result = leftNum + rightNum;
+                    break;
+                case '-':
+                    result = leftNum - rightNum;
+                    break;
+                case '*':
+                    result = leftNum * rightNum;
+                    break;
+                case '/':
+                    if (rightNum === 0) {
+                        alert("It’s over 9000!");
+                        console.log("It’s over 9000!");
+                        return;
+                    }
+                    result = leftNum / rightNum;
+                    break;
+                case '%':
+                    if (rightNum === 0) {
+                        alert("It’s over 9000!");
+                        console.log("It’s over 9000!");
+                        return;
+                    }
+                    result = leftNum % rightNum;
+                    break;
+                default:
+                    alert('Error :(');
+                    return;
             }
 
-            
-            alert("Result: " + result);
-            console.log("Result:", val1, operator, val2, "=", result);
-        }
+            // Display result in alert and log it to console
+            alert('Result: ' + result);
+            console.log('Result: ' + result);
+        });
 
-        
+        // Every 30 seconds, show alert
         setInterval(function() {
-            alert("please use me. . .");
+            alert('Please, use me...');
         }, 30000);
     </script>
 

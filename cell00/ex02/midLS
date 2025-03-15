@@ -1,4 +1,1 @@
-#!/bin/bash
-
-# List all files and directories (excluding hidden ones), separated by commas
 ls -1 | grep -v '^\.' | paste -sd, -
